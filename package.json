@@ -1,0 +1,24 @@
+{
+  "name": "embedder",
+  "version": "0.0.1",
+  "description": "A JavaScript bot to embed unembedded links",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "keywords": [
+    "discord",
+    "discordjs",
+    "javascript",
+    "bot"
+  ],
+  "author": "ZtereoHYPE",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "https": "^1.0.0",
+    "instagram-url-direct": "^1.0.9",
+    "tiktok-scraper": "^1.4.36"
+  }
+}
