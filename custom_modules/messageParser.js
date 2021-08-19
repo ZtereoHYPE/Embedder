@@ -5,15 +5,9 @@ module.exports = {
         return match? match[0]:false
     },
     checkForTikTok(url) {
-        if (url.includes('tiktok')) {
-            return true
-        }
-        return false
+        return url.includes('tiktok')
     },
     checkForInstagram(url) {
-        if (url.includes('instagram')) {
-            return true
-        }
-        return false
+        return url.includes('instagram')
     }
 }
