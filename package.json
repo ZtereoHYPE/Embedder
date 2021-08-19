@@ -18,7 +18,6 @@
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "https": "^1.0.0",
-    "instagram-url-direct": "^1.0.9",
     "tiktok-scraper": "^1.4.36"
   }
 }
