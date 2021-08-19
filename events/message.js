@@ -22,12 +22,12 @@ module.exports = {
 				let code = path.substring(3, path.length - 1)
 				instagramGetUrl(url).then((result) => {
 					console.log(result)
-					for (let i = 0; i <= result.url_list.length; i++) {
+					for (const url of result.url_list) {
 						let embed = new MessageEmbed()
 							.setTitle('Instagram Media')
 							.setColor(Math.random() > 0.5 ? '#F56040' : '#833AB4')
-							.setImage(result.url_list[i])
-							.setURL(result.url_list[i]);
+							.setImage(url)
+							.setURL(url);
 						console.log(embed);
 						message.channel.send({ embeds: [embed] });
 					}
