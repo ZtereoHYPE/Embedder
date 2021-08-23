@@ -1,7 +1,7 @@
 const messageParser = require('../custom_modules/messageParser.js');
 const TikTokScraper = require('tiktok-scraper');
 const { MessageEmbed } = require('discord.js');
-const instagramGetUrl = require("instagram-url-direct")
+// const instagramGetUrl = require("instagram-url-direct")
 module.exports = {
 	name: 'messageCreate',
 	execute(message) {
@@ -17,22 +17,23 @@ module.exports = {
 						.setURL(data.collector[0].videoUrl);
 					message.channel.send({ embeds: [embed] });
 				});
-			} else if (messageParser.checkForInstagram(url)) {
-				let path = new URL(url).pathname;
-				let code = path.substring(3, path.length - 1)
-				instagramGetUrl(url).then((result) => {
-					console.log(result)
-					for (const url of result.url_list) {
-						let embed = new MessageEmbed()
-							.setTitle('Instagram Media')
-							.setColor(Math.random() > 0.5 ? '#F56040' : '#833AB4')
-							.setImage(url)
-							.setURL(url);
-						console.log(embed);
-						message.channel.send({ embeds: [embed] });
-					}
-				});
-			}
+			} 
+			// else if (messageParser.checkForInstagram(url)) {
+			// 	let path = new URL(url).pathname;
+			// 	let code = path.substring(3, path.length - 1)
+			// 	instagramGetUrl(url).then((result) => {
+			// 		console.log(result)
+			// 		for (const url of result.url_list) {
+			// 			let embed = new MessageEmbed()
+			// 				.setTitle('Instagram Media')
+			// 				.setColor(Math.random() > 0.5 ? '#F56040' : '#833AB4')
+			// 				.setImage(url)
+			// 				.setURL(url);
+			// 			console.log(embed);
+			// 			message.channel.send({ embeds: [embed] });
+			// 		}
+			// 	});
+			// }
 		}
 	}
 }
