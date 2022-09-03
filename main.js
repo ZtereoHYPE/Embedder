@@ -18,5 +18,6 @@ for (file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args));
     }
 }
+ODc3NDg0ODE5ODAwNTIyNzky.GgO0na.U9DgAAP-6QXSGEp7FQ8HnOfhjw8RRQLl2J_zXs
 
 client.login(process.env.TOKEN);
